@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>最簡易履歷頁面</title>
+
+<style>
+body {
+  font-family: "Microsoft JhengHei", sans-serif;
+  margin: 0;
+  background-color: #e5e7eb;
+}
+
+.card {
+  display: flex;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.left {
+  background-color: #2563eb;  
+  color: white;
+  width: 35%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.left img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  margin-bottom: 15px;
+}
+
+.left h1 {
+  margin: 0;
+  font-size: 1.6em;
+}
+
+.left .role {
+  margin-top: 4px;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.contact {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+.right {
+  background-color: #f9fafb;
+  width: 65%;
+  padding: 30px 25px;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #2563eb;
+  font-size: 1.1em;
+  margin-top: 15px;
+  border-left: 4px solid #2563eb;
+  padding-left: 6px;
+}
+
+ul {
+  padding-left: 16px;
+}
+
+
+.skill {
+  display: inline-block;
+  background: #e5e7eb;
+  color: #111;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 3px;   
+  font-size: 14px;
+  border: 1px solid #ccc; 
+}
+</style>
+</head>
+
+<body>
+<article class="card">
+  <!-- 左半邊 -->
+  <div class="left">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuOlBT7GTGvXU1iGleoVZ9i5gudsYbVoHItw&s" alt="大頭照" />
+    <h1>吳承桓</h1>
+    <p class="role">前端工程師</p>
+    <div class="contact">
+      email@example.com<br>
+      +886 9x-xxx-xxxx
+    </div>
+  </div>
+
+  <!-- 右半邊 -->
+  <div class="right">
+    <section>
+      <h2>簡歷（About）</h2>
+      <p>曾參加NVIDIA創作者計畫(假的)、國際發明大賽(假的)</p>
+    </section>
+
+    <section>
+      <h2>學歷（Education）</h2>
+      <ul>
+        <li><strong>台東大學 / 應用數學系</strong>（2024–2028）<br>
+        相關課程：資料結構、網頁程式設計、微積分、線性代數、機率論
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>專業能力（Skills）</h2>
+      <div>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">React</span>
+        <span class="skill">Git</span>
+        <span class="skill">設計系統</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>獲獎 / 作品（Awards & Works）</h2>
+      <ul>
+        <li><strong>可互動式網頁校園地圖 / 2028</strong><br>
+        (假的) 校內設計比賽第一名，互動式資訊視覺化網站。
+        </li>
+      </ul>
+    </section>
+  </div>
+</article>
+</body>
+</html>
