@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BMI</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f5f5f5;
+      padding: 40px;
+    }
+    .card {
+      max-width: 350px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1e4ec9;
+    }
+    #result {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h2 style="text-align:center;">BMI 計算器</h2>
+
+    <label>身高 (cm)</label>
+    <input type="number" id="height" placeholder="例如：170">
+
+    <label>體重 (kg)</label>
+    <input type="number" id="weight" placeholder="例如：65">
+
+    <button onclick="calcBMI()">計算 BMI</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calcBMI() {
+      const h = parseFloat(document.getElementById("height").value);
+      const w = parseFloat(document.getElementById("weight").value);
+
+      if (!h || !w || h <= 0 || w <= 0) {
+        document.getElementById("result").textContent = "請輸入正確的數值";
+        return;
+      }
+
+      const bmi = w / ((h / 100) ** 2);
+      let status = "";
+
+      if (bmi < 18.5) status = "過輕";
+      else if (bmi < 24) status = "正常";
+      else if (bmi < 27) status = "過重";
+      else status = "肥胖";
+
+      document.getElementById("result").textContent =
+        `你的 BMI：${bmi.toFixed(2)}（${status}）`;
+    }
+  </script>
+
+</body>
+</html>
